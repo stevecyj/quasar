@@ -3,9 +3,14 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
+import eventBus from 'src/utils/eventBus'
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  setup () {
+    const init = () => { eventBus.emit('plus') }
+    onMounted(() => { init() })
+  }
 })
 </script>
