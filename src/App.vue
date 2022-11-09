@@ -9,10 +9,15 @@ import eventBus from 'src/utils/eventBus'
 
 export default defineComponent({
   name: 'App',
-  setup () {
+  setup() {
     const $q = useQuasar()
-    const init = () => { eventBus.emit('plus'); console.log($q.platform) }
-    onMounted(() => { init() })
+    const init = () => {
+      eventBus.emit('plus')
+      console.log($q.platform)
+    }
+    onMounted(() => {
+      init()
+    })
   }
 })
 </script>
