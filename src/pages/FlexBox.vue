@@ -1,11 +1,7 @@
 <template>
   <q-page padding>
     <q-btn @click="toggleShow">show</q-btn>
-    <transition
-      appear
-      enter-active-class="animated rotateOutDownRight"
-      leave-active-class="animated rotateOutDownRight"
-    >
+    <transition appear enter-active-class="animated rotateOutDownRight" leave-active-class="animated rotateOutUpRight">
       <!-- Wrapping only one DOM element, defined by QBtn -->
       <q-btn v-show="show" color="secondary" icon="mail" label="Email" />
     </transition>
