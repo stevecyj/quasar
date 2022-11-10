@@ -4,7 +4,10 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/FlexBox.vue') }
+      { path: '', component: () => import('pages/FlexBox.vue') },
+      { path: 'index', component: () => import('pages/IndexPage.vue') },
+      { path: 'setup_counter', component: () => import('pages/SetupCounter.vue') },
+      { path: 'style', component: () => import('pages/StyleIdent.vue') }
     ]
   },
 
